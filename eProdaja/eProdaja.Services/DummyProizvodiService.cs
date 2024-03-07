@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public class DummyProizvodiService : ProizvodiService
+    public class DummyProizvodiService : IProizvodiService
     {
         DateTime time = DateTime.Now;
 
@@ -21,10 +21,9 @@ namespace eProdaja.Services
                 Cijena = 999
             }
         };
-        public override List<Proizvodi> GetList()
+
+        public List<Proizvodi> GetList()
         {
-            var t = time;
-            //Debugger.Launch();
             return List;
         }
     }
