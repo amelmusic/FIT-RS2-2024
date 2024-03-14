@@ -1,5 +1,6 @@
 ﻿using eProdaja.Model;
 using eProdaja.Model.Requests;
+using eProdaja.Model.SearchObjects;
 using eProdaja.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Storage;
@@ -18,9 +19,9 @@ namespace eProdaja.API.Controllers
         }
 
         [HttpGet]
-        public List<Korisnici> GetList()
+        public PagedResult<Korisnici> GetList([FromQuery]KorisniciSearchObject searchObject)
         {
-            return _service.GetList();
+            return _service.GetList(searchObject);
         }
 
         [HttpPost]

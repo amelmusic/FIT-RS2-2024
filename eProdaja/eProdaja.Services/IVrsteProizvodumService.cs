@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public interface IProizvodiService : IService<Proizvodi, ProizvodiSearchObject>
+    public interface IVrsteProizvodumService : IService<VrsteProizvodum, VrsteProizvodumSearchObject>
     {
-      
+       
     }
 }

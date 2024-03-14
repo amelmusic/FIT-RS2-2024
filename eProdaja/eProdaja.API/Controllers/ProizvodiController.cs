@@ -1,4 +1,5 @@
 ﻿using eProdaja.Model;
+using eProdaja.Model.SearchObjects;
 using eProdaja.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,19 +7,10 @@ namespace eProdaja.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ProizvodiController : ControllerBase
+    public class ProizvodiController : BaseController<Proizvodi, ProizvodiSearchObject>
     {
-        protected IProizvodiService _service;
 
         public ProizvodiController(IProizvodiService service)
-        {
-            _service = service;
-        }
-
-        [HttpGet]
-        public List<Proizvodi> GetList()
-        {
-            return _service.GetList();
-        }
+        : base(service) { }
     }
 }

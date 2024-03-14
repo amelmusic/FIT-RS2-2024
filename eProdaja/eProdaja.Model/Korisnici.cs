@@ -20,7 +20,7 @@ namespace eProdaja.Model
 
         public bool? Status { get; set; }
 
-        //public virtual ICollection<KorisniciUloge> KorisniciUloges { get; set; } = new List<KorisniciUloge>();
+        public virtual ICollection<KorisniciUloge> KorisniciUloges { get; set; } = new List<KorisniciUloge>();
     }
 
 }
