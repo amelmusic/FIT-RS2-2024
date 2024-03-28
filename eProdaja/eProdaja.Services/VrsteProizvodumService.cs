@@ -1,4 +1,5 @@
 ﻿using eProdaja.Model;
+using eProdaja.Model.Requests;
 using eProdaja.Model.SearchObjects;
 using eProdaja.Services.Database;
 using MapsterMapper;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public class VrsteProizvodumService : BaseService<Model.VrsteProizvodum, VrsteProizvodumSearchObject, Database.VrsteProizvodum>, IVrsteProizvodumService
+    public class VrsteProizvodumService : BaseCRUDService<Model.VrsteProizvodum, VrsteProizvodumSearchObject, Database.VrsteProizvodum, VrsteProizvodumUpsertRequest, VrsteProizvodumUpsertRequest>, IVrsteProizvodumService
     {
 
         public VrsteProizvodumService(EProdajaContext context, IMapper mapper)

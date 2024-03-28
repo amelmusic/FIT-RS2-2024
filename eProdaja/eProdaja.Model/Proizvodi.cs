@@ -9,5 +9,6 @@ namespace eProdaja.Model
         public int ProizvodId { get; set; }
         public string Naziv { get; set; }
         public decimal Cijena { get; set; }
+        public string? StateMachine { get; set; }
     }
 }

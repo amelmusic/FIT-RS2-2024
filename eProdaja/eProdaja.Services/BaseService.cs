@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public class BaseService<TModel, TSearch, TDbEntity> : IService<TModel, TSearch> where TSearch: BaseSearchObject where TDbEntity : class where TModel: class
+    public abstract class BaseService<TModel, TSearch, TDbEntity> : IService<TModel, TSearch> where TSearch: BaseSearchObject where TDbEntity : class where TModel: class
     {
         public EProdajaContext Context { get; set; }
         public IMapper Mapper { get; set; }

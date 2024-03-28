@@ -9,11 +9,8 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public interface IKorisniciService
+    public interface IKorisniciService : ICRUDService<Korisnici, KorisniciSearchObject, KorisniciInsertRequest, KorisniciUpdateRequest>
     {
-        PagedResult<Korisnici> GetList(KorisniciSearchObject searchObject);
-        Korisnici Insert(KorisniciInsertRequest request);
 
-        Korisnici Update(int id, KorisniciUpdateRequest request);
     }
 }
